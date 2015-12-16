@@ -1,5 +1,9 @@
 $(document).ready(function() {
-	$("div:not(.container) > div").on("mouseenter", function() {
+	$("#clear").on("click", function() {
+		$(".column > div").css("background", "#FFF");
+	});
+	
+	$(".column > div").on("mouseenter", function() {
 		$(this).css("background-color", "lightcoral");
 	});
 });
