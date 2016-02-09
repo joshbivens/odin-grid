@@ -1,38 +1,38 @@
 $(document).ready(function() {
+
   var clicked = false;
-  
+
+  newGrid(7);
+
 	$("#clear").on("click", function() {
-		$(".column > div").css("background", "none");
+		$(".grid div").css("background", "none");
 	});
-	
-	$(".column > div").on("mouseenter", function() {
-		$(this).css("background-color", "salmon");
+
+	$(".grid div").on("mouseenter", function() {
+		$(this).css("background-color", "tomato");
 	});
-  
+
   $("#restart").on("click", function() {
     $(".grid").empty();
     var size = prompt("Enter the size of the new grid: ");
     newGrid(size);
   });
-  
+
   $("#random").on("click", function() {
-    $(".column > div").on("mouseenter", function() {
+    $(".grid div").on("mouseenter", function() {
       $(this).css("background-color", (clicked ? "#" + Math.floor(Math.random()*16777215).toString(16) : "salmon"));
     });
     clicked = !clicked;
   });
 });
 
+
 function newGrid(size) {
-  var column = $(".column");
-  
-  for (var i = 0, x = size; i < x; i++) {
-    column += "<div></div>";
-    console.log(column);
+  var width = ($(".grid").width() / size) - 4;
+
+  for (var j = 0, y = size * size; j < y; j++) {
+    $(".grid").append("<div></div>");
   }
-  
-  for (var j = 0, y = size; j < y; j++) {
-    $(".grid").append(column);
-  }
-  
+
+  $(".grid div").css({"width": width, "height": width});
 }

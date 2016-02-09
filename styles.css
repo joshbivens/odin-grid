@@ -9,6 +9,8 @@
 
 .grid {
 	display: flex;
+	flex-wrap: wrap;
+	width: 800px;
 }
 
 .inputs {
@@ -19,9 +21,9 @@
   margin: 0 10px;
 }
 
-.column > div {
-	height: 25px;
-	width: 25px;
+.grid div {
+	width: 72px;
+	height: 72px;
 	border: 1px solid #AAA;
-	margin: 2px; 
+	margin: 1px;
 }
