@@ -3,7 +3,7 @@ $(document).ready(function() {
   var clicked = false;
   var initialColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 
-  newGrid(7, initialColor);
+  newGrid(15, initialColor);
 
 	$("#clear").on("click", function() {
 		$(".grid div").css("background", "none");
@@ -29,6 +29,7 @@ $(document).ready(function() {
       $(".grid").append("<div></div>");
     }
     $(".grid div").css({"width": width, "height": width});
+    $("span").text(color);
     $(".grid div").on("mouseenter", function() {
   		$(this).css("background-color", color);
   	});

@@ -1,27 +1,25 @@
 
 .container {
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	font-family: "Arial", sans-serif;
 }
 
 .grid {
-	display: flex;
-	flex-wrap: wrap;
-	width: 800px;
+	width: 600px;
+	margin: 0 auto;
 }
 
 .grid div {
+	display: inline-block;
 	width: 72px;
 	height: 72px;
-	border: 1px solid #EEE;
-	margin: 1px;
+	border: 1px solid #ddd;
+	margin: 0 1px;
 }
 
 .inputs {
 	margin: 20px;
+	text-align: center;
 }
 
 .inputs button {
@@ -32,11 +30,16 @@
 	outline: none;
 	cursor: pointer;
 	font-size: 15px;
-	background: #999;
+	background: #bbb;
 	color: #fff;
 	transition: background .15s ease;
 }
 
 .inputs button:hover {
-	background: #777;
+	background: #999;
+}
+
+.inputs span {
+	padding-right: 20px;
+	font-size: 20px;
 }
