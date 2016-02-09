@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
   function newGrid(size, color) {
-    var width = ($(".grid").width() / size) - 4;
+    var width = ($(".grid").width() / size);
     for (var j = 0, y = size * size; j < y; j++) {
       $(".grid").append("<div></div>");
     }
