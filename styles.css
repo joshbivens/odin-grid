@@ -13,17 +13,30 @@
 	width: 800px;
 }
 
+.grid div {
+	width: 72px;
+	height: 72px;
+	border: 1px solid #EEE;
+	margin: 1px;
+}
+
 .inputs {
 	margin: 20px;
 }
 
-.inputs input, .inputs button {
+.inputs button {
   margin: 0 10px;
+	border: 0;
+	border-radius: 20px;
+	padding: 10px 18px;
+	outline: none;
+	cursor: pointer;
+	font-size: 15px;
+	background: #999;
+	color: #fff;
+	transition: background .15s ease;
 }
 
-.grid div {
-	width: 72px;
-	height: 72px;
-	border: 1px solid #AAA;
-	margin: 1px;
+.inputs button:hover {
+	background: #777;
 }
