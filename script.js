@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $("#random").on("click", function() {
     $(".grid div").on("mouseenter", function() {
-      $(this).css("background-color", (clicked ? "#" + Math.floor(Math.random()*16777215).toString(16) : color));
+      $(this).css("background-color", (clicked ? "#" + Math.floor(Math.random()*16777215).toString(16) : null));
     });
     clicked = !clicked;
   });
