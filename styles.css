@@ -11,8 +11,12 @@
 	display: flex;
 }
 
-.button {
-	margin-bottom: 20px;
+.inputs {
+	margin: 20px;
+}
+
+.inputs input, .inputs button {
+  margin: 0 10px;
 }
 
 .column > div {
