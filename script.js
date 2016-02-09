@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var clicked = false;
-  var initialColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  var initialColor = "#" + Math.random().toString(16).slice(2, 8).toUpperCase();
 
   newGrid(15, initialColor);
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
 	});
 
   $("#restart").on("click", function() {
-    var color = "#" + Math.floor(Math.random()*16777215).toString(16);
+    var color = "#" + Math.random().toString(16).slice(2, 8).toUpperCase();
     $(".grid").empty();
     var size = prompt("Enter the size of the new grid");
     newGrid(size, color);
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $("#random").on("click", function() {
     $(".grid div").on("mouseenter", function() {
-      $(this).css("background-color", (clicked ? "#" + Math.floor(Math.random()*16777215).toString(16) : null));
+      $(this).css("background-color", (clicked ? "#" + Math.random().toString(16).slice(2, 8).toUpperCase() : null));
     });
     clicked = !clicked;
   });

@@ -4,4 +4,6 @@ An exercise for the [Odin Project](http://www.theodinproject.com/web-development
 
 One of the optional features is generating a random color for each cell in the grid that you pass over. For this, I found an excellent [one-liner](http://www.paulirish.com/2009/random-hex-color-code-snippets/) (see bottom) from web superstar Paul Irish.
 
+Edit: An even *more* succinct random hex generator: `"#" + Math.random().toString(16).slice(2, 8).toUpperCase()` (Credit: [@kriskowal](https://twitter.com/kriskowal))
+
 [Demo](http://joshbivens.github.io/odin-grid)
